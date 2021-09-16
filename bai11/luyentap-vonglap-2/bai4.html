@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ hình chữ nhật</title>
+</head>
+<body>
+<h1> bài 4 : Vẽ hình chữ nhật </h1>
+<h1 id="result"></h1>
+<script>
+    function rectangular() {
+        let rectagular = ""
+        for (let i = 0; i <= 6; i++) {
+            for (let j = 0; j <= 20; j++) {
+                if (i == 0 || i == 6) {
+                    rectagular += "*"
+                } else if (j == 0 || j == 20) {
+                    rectagular += "*"
+                } else {
+                    rectagular += "&nbsp&nbsp"
+                }
+            }
+            rectagular += "<br>"
+        }
+        document.getElementById('result').innerHTML = rectagular
+    }
+    rectangular()
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Số tiền gửi vào ngân hàng :</th>
+        <td><input type="number" id="money"></td>
+    </tr>
+    <tr>
+        <th>Lãi suất theo tháng : </th>
+        <td><input type="number" id="interestRate"></td>
+    </tr>
+    <tr>
+        <th>Số tháng gửi : </th>
+        <td><input type="number" id="month"></td>
+    </tr>
+    <tr>
+        <th><button onclick="result()">Tính</button></th>
+        <th id="result"></th></tr>
+</table>
+<script>
+    function result () {
+        let money = parseFloat(document.getElementById('money').value)
+        let interestRate = parseFloat(document.getElementById('interestRate').value)
+        let month = parseFloat(document.getElementById('month').value)
+        let result = 0
+        let tienlai
+        for (let i = 1; i < month; i++) {
+           tienlai =money*interestRate
+            result = money+tienlai
+            money=result
+        }
+        document.getElementById('result').innerHTML = "Số tiền sau " + month + " tháng gửi là : " + money
+    }
+</script>
+</body>
+</html>
