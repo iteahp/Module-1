@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa của 1 số nguyên dương</title>
+</head>
+<body>
+<script>
+    let num =parseInt(prompt("Nhập 1 số nguyên dương : "))
+    let fac = 1
+    let i=num
+
+    if (num<=0){
+        alert("Đây không phải là 1 số nguyên dương ")
+    } else {
+       while (i>=1){
+           fac=fac*i
+           i=i-1
+       }
+        alert("Giai thừa của "+num + " = " + fac )
+    }
+</script>
+</body>
+</html>

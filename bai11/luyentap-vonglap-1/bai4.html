@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số trong dãy chia hết cho 5</title>
+</head>
+<body>
+<p>In ra 20 số đầu tiên trong dãy FIBONACCi chia hết cho 5</p>
+<script>
+    let a=0;
+    let b=1;
+    let count=0;
+    while (count<20){
+        if (b%5==0){
+            document.write(b+"<br>")
+            count++
+        }
+        let c=a+b
+        a=b
+        b=c
+    }
+</script>
+</body>
+</html>

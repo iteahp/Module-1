@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In ra dãy Fibonacci </title>
+</head>
+<body>
+<p>Bài 1 : IN ra dãy Fibonacci với số lượng số nhập vào  </p>
+<script>
+    let n = parseInt(prompt("Nhập vào số lượng số cần in ra :  "))
+    let a = 0
+    let b=1
+    let c
+    let count = 0
+    if (n>0){
+        while (count<n){
+            document.write(b+"<br>")
+            c=a+b
+            a=b
+            b=c
+            count++
+        }
+    } else {
+        alert("Nhập số cho đúng đi nào !")
+    }
+</script>
+</body>
+</html>
