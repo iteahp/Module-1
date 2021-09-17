@@ -7,39 +7,38 @@
 <body>
 <script>
     function checkPrimeNumbers(n) {
-       let check = true
         if (n < 2){
-            check =  false;
+            return false;
         }
         else if (n == 2){
-            check = true;
+            return true;
         }
         else if (n % 2 == 0){
-            check = false;
+            return false;
         }
         else {
-            for (let i = 1; i < n; i++)
+            for ( i = 3; i < Math.sqrt(n); i+=2)
             {
                 if (n % i == 0){
-                    check = false;
+                    return false;
                     break;
                 }
             }
         }
-        check = true
+        return true
     }
-    var n = prompt("Nhập số nguyên tố đầu tiên bạn muốn in ra",'');
-    var count = 0;
-    var number = 2;
-    var result = "";
+   let n = prompt("Nhập số nguyên tố đầu tiên bạn muốn in ra",'');
+   let count = 0;
+   let number = 2;
+   let result = "";
     while ( count < n) {
         if (checkPrimeNumbers(number)) {
             count +=1;
-            result = result +number
+            result = result + `<span>${number} ;</span>`
         }
         number+=1;
     }
     document.write(result);
-</script>
+    </script>
 </body>
 </html>
