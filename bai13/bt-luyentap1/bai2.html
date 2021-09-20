@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let array = [1,5,7,9,10,15,14,20,2,78]
+    document.write("Mảng tạo sẵn = [" +array+ "] <br>" )
+    index = 0
+    max = array[0]
+    for (let i = 1; i<array.length;i++){
+        if (array[i]>max){
+            max =array[i];
+            index = i
+        }
+    }
+    document.write("Số lớn nhất là : " + max + " và ở vị trí thứ " + index)
+</script>
+</body>
+</html>

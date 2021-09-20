@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="224e566b-706a-4b93-8701-21175a2b724f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/thuchanh/caro-dongian.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuchanh/th-daonguocmang.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuchanh/th-taomang.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuchanh/th-tim-gia-tri.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuchanh/th-tim-so-lon-nhat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai13/bt-luyentap1/bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai13/bt-luyentap1/bai3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai13/bt-luyentap1/bai4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai5" beforeDir="false" afterPath="$PROJECT_DIR$/../bai5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai9" beforeDir="false" afterPath="$PROJECT_DIR$/../bai9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bài 6" beforeDir="false" afterPath="$PROJECT_DIR$/../bài 6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../minitest" beforeDir="false" afterPath="$PROJECT_DIR$/../minitest" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1yMKeM9zauQLXZEVbCUJxpHYxbs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="224e566b-706a-4b93-8701-21175a2b724f" name="Changes" comment="" />
+      <created>1632056111051</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632056111051</updated>
+      <workItem from="1632056112242" duration="30000" />
+      <workItem from="1632102691651" duration="968000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

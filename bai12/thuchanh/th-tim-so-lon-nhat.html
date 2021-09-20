@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số lớn nhất trong mảng</title>
+</head>
+<body>
+<script>
+    let x=[5,8,9,7,5,4,3,10,20]
+    max = x[0];
+    index = 0
+    for (let i=0;i<x.length;i++){
+        if (x[i]>max){
+            max = x[i]
+            index = i
+        }
+    } document.write("Giá trị lớn nhất là : " + max + " được tìm thấy tại " + index )
+</script>
+</body>
+</html>

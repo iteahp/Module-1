@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [1,5,7,9,10,15,14,20,2,78]
+    document.write("Mảng tạo sẵn = [" +array+ "] <br>" )
+    max = array[0]
+    let total=0
+    let stb
+    for (let i = 1; i<array.length;i++){
+        if (array[i]>max){
+            max =array[i];
+            index = i
+        }
+    }
+    document.write("Số lớn nhất là : " + max +"<br>")
+    for (let i=0;i<array.length;i++){
+        total =total+array[i]
+    }
+    stb = total/array.length
+    document.write("Trung bình cộng của các phần tử trong mảng = " + stb)
+</script>
+</body>
+</html>

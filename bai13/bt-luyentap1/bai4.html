@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<b> Nhập các phần tử vào mảng : </b> <br>
+<input type="number" id="number">
+<input type="button" onclick="add()" value="Add">
+<input type="button" onclick="daonguoc()" value="Reverse">
+<div id="displayArray"></div>
+<div id ="reverse" ></div>
+
+<script>
+    let array1 = Array()
+    let i  = 0
+     function add(){
+        array1[i] = document.getElementById('number').value;
+        alert("Đã nhập " + array1[i] +" vào mảng tại vị trí thứ " + i)
+         i++
+         document.getElementById('number').value = ""
+         document.getElementById('displayArray').innerHTML = "Mảng sau khi nhập giá trị A = "+ array1
+
+     }
+     function daonguoc() {
+        array1.reverse()
+
+         document.getElementById('reverse').innerHTML = "Mảng sau khi đảo ngược A = " + array1
+     }
+
+
+
+
+
+</script>
+</body>
+</html>

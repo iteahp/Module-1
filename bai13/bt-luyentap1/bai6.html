@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let arrs = Array()
+    for (let i=0;i<10;i++){
+        arrs[i] =parseInt( prompt("Nhập phần tử vào mảng : "))
+    }
+    let V = prompt("Nhập số cần kiểm tra")
+    if (arrs.indexOf(V) !== -1){
+        document.write("Số cần kiểm tra thuộc mảng ")
+    }else {
+        document.write("Số cần kiểm tra không thuộc mảng")
+    }
+
+</script>
+</body>
+</html>

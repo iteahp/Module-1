@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrs = Array()
+    for (let i = 0; i < 10; i++) {
+        arrs[i] = parseInt(prompt("Nhập phần tử vào mảng : "))
+    }
+    let V = prompt("Nhập số cần kiểm tra");
+    if (arrs.indexOf(V) !== -1) {
+        let index = arrs.indexOf(V)
+        for (i = index; i < arrs.length; i++) {
+            arrs[i] = arrs[i + 1]
+
+        }
+        arrs[arrs.length - 1] = 0
+    }
+
+
+</script>
+</body>
+</html>
