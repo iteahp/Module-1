@@ -8,6 +8,32 @@
 <script>
     let a = prompt("Nhập vào chuỗi 1 : ")
     let b = prompt("Nhập vào chuỗi 2 : ")
+    let arr1 =a.split("")
+    let arr2 =b.split("")
+    let check = false
+    if (arr1.length>=arr2.length){
+        for (let i= 0;i<arr1.length;i++){
+            if (arr1[i]===arr2[i]){
+                check = true
+            }else{
+                check=false
+            }
+        }
+    }else {
+        for (let i=0;i<arr2.length;i++){
+            if (arr2[i]==arr1[i]){
+                check =true
+            }else{
+                check=false
+            }
+        }
+    }
+    if (check){
+        alert("Hai chuỗi nhập vào giống nhau")
+    }else {
+        alert("Hai chuỗi nhập vào khác nhau")
+    }
+
 </script>
 </body>
 </html>

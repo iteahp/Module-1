@@ -7,14 +7,19 @@
 <body>
 <script>
 
-    let arrs = prompt("Nhập vào 1 mảng ký tự : ")
+    let a = "mot-mang-ky-tu"
+    let arrs = a.split("")
 
     for(let i = 0;i<arrs.length;i++){
         if (arrs[i] === "-"){
             arrs[i] = "_"
         }
     }
-    console.log(arrs)
+    let str = ""
+    for(let i = 0;i<arrs.length;i++){
+        str+=arrs[i]
+    }
+    console.log(str)
 </script>
 </body>
 </html>

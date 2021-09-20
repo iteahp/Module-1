@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr1 = ["one","two","three","four"]
+  let arr2 = ["một","hai","ba","bốn"]
+  let text = prompt("Nhập vào từ cần tìm nghĩa ")
+  let str = ""
+  for (let i= 0;i<arr1.length;i++){
+      if (text == arr1[i]){
+          str = arr2[i]
+      }
+  }
+  alert("Từ đã nhập có nghĩa là : " + str)
+</script>
+</body>
+</html>
