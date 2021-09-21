@@ -8,7 +8,14 @@
 <script>
     let a = prompt("Nhập vào chuỗi  : ")
     let arr =a.split("")
-    alert("Chuỗi gồm " +arr.length +" ký tự ")
+    let count = 1
+    space = " "
+    for (let i=0;i<arr.length;i++){
+        if (arr[i]===space){
+            count++
+        }
+    }
+    alert("Chuỗi gồm có " +count+" từ")
 </script>
 </body>
 </html>

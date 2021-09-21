@@ -10,12 +10,19 @@
   let arr2 = ["một","hai","ba","bốn"]
   let text = prompt("Nhập vào từ cần tìm nghĩa ")
   let str = ""
+  let check = false
   for (let i= 0;i<arr1.length;i++){
-      if (text == arr1[i]){
+      if (text === arr1[i]){
           str = arr2[i]
+          alert("Từ đã nhập có nghĩa là : " + str)
+          check = true
+          break;
+
       }
   }
-  alert("Từ đã nhập có nghĩa là : " + str)
+  if (check === false){
+      alert("Không tìm thấy ")
+  }
 </script>
 </body>
 </html>
