@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function processConfirm(answer) {
+        let result = "";
+        if (answer) {
+            result = "OK.vậy thì bắt đầu nào !!";
+        } else {
+            result = "Thế thôi . Để sau cũng được ";
+        }
+        return result;
+    }
+
+    let confirmAnswer = confirm("Bạn có muốn chơi 1 trò chơi với tôi không ");
+    let theAnswer = processConfirm(confirmAnswer);
+    alert(theAnswer);
+</script>
+</body>
+</html>

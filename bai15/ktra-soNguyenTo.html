@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkPrimeNumber(a){
+        let check = true
+        if (a<2){
+            check = false
+        }else if (a==2){
+            check = true
+        }else if (a%2==0){
+            check = false
+        }
+        else {
+            for (let i =3;i<=Math.sqrt(a);i+=2){
+                if (a % i ==0){
+                    check = false
+                    break;
+                }
+            }
+        }
+        return check
+    }
+    let n = parseInt(prompt("Nhập số cần kiểm tra : "))
+    if (checkPrimeNumber(n)){
+        alert("Số " + n + " là số nguyên tố")
+    } else {
+        alert("Số "+n + "không phải số nguyên  tố ")
+    }
+    let arr = []
+    for (let i =1;i<=100;i++){
+        if (checkPrimeNumber(i)){
+            arr.push(i)
+        }
+    }
+    document.write("Đây là tập hợp các số nguyên tố nhỏ hơn 100 : " + arr)
+</script>
+</body>
+</html>
