@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(num){
+        let check = true;
+        if (num % 1==0){
+            check = true
+        }else {
+            check = false
+        }
+        return check
+    }
+
+    let a = prompt("Nhập ký tự vào đây ")
+
+    if (check(a)){
+
+    alert(a + " là 1 ký tự số ")
+    }else {
+        alert( a +  " không phải ký tự số ")
+    }
+</script>
+
+</body>
+</html>

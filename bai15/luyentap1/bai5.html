@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr1 = ["Polaris","Aldebaran", "Deneb"," Vega", "Altair", "Dubhe" ,"Regulus"]
+  let arr2 = [ "Ursa" ,"Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa" ,"Major" , "Leo"]
+  function check(a){
+      let check =true
+      for (let i = 0;i<arr1.length;i++){
+          if (arr1[i] === a){
+              a = arr2[i]
+              alert(a)
+              break;
+          }else check =false
+      }
+      if (check == false){
+          alert("Không tìm thấy ")
+      }
+  }
+  let str = prompt("Nhập chuỗi cần tìm ")
+  check(str)
+</script>
+</body>
+</html>

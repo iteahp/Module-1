@@ -4,31 +4,32 @@
     <meta charset="UTF-8">
     <title>Chuyển đổi giữa feet và meters</title>
     <style>
-        th{
+        b{
             text-align: left;
         }
     </style>
 </head>
 <body>
-<table width="35%">
-    <tr>
-        <th><input type="number" id="feet"  oninput="feetToMeters()">Feet</th>
-        <th><button >=></button></th>
-        <th><input type="number" id="displayMeters" >Meters</th>
-    </tr> <tr>
-        <th><input type="number" id="meters" oninput="metersToFeet()">Meters</th>
-        <th><button >=></button></th>
-        <th><input type="text" id="displayFeet">Feet</th>
-    </tr>
+
+        <b><input type="number" id="feet"  onchange="feetToMeters()" oninput="feetToMeters()">Feet</b>
+        <br>
+        <b  id="displayMeters" ></b>
+        <br>
+        <b><input type="number" id="meters"  onchange="metersToFeet()" oninput="metersToFeet()">Meters</b>
+        <br>
+        <b  id="displayFeet"></b>
+   
 </table>
 <script>
     function feetToMeters(){
         let feet = +document.getElementById('feet').value;
         let metter = 0.305 * feet
-        document.getElementById('displayMeters').innerHTML = metter
+        document.getElementById('displayMeters').innerHTML = metter + " Meters"
     }
     function metersToFeet(){
-
+        let meters = +document.getElementById('meters').value;
+        let feet = 3.279 * meters
+        document.getElementById('displayFeet').innerHTML = feet + " Feet"
     }
 
 </script>
