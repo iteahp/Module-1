@@ -8,13 +8,15 @@
 <script>
     function compareAndSum(a,b){
         if (a>b){
-            alert(a +" lớn hơn " + b)
+            return a +" lớn hơn " + b
         }else {
             return a+b
         }
     }
-    let sum = compareAndSum(3,5)
-    console.log(sum)
+    alert( compareAndSum(3,5))
+    alert( compareAndSum(5,3))
+
+
 </script>
 </body>
 </html>

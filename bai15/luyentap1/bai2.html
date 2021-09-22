@@ -5,13 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-<h1 style="text-align: center"><button onclick="add1()">Click Me</button></h1>
+
 <script>
-    function add1(){
-        let a = parseInt(prompt("Nhập vào 1 số : "))
-        a = a+1
-        alert(a)
+    function add1(number){
+        return ++number
+
     }
+    alert(add1(5))
 </script>
 </body>
 </html>
