@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm</title>
+    <style>
+        tr{
+            height: 40px;
+        }
+        .edit{
+            height: 30px; width: 50px;
+            background: yellowgreen;
+        }
+        .del{
+            height: 30px; width: 60px;
+            background: yellowgreen;
+        }
+        .add{
+            height: 30px; width: 50px;
+            background: yellow;
+        }
+        .list{
+          width: 40% ;
+        }
+         tr:nth-child(2n){
+            background:  aliceblue;
+        }
+
+
+    </style>
+</head>
+<body>
+<h1>Add New Product</h1>
+<div style="background: aliceblue; height: 50px; width: 250px;text-align: center">
+    <input type="text" id="newproduct" >
+    <button id="add" onclick="add()" class="add">ADD</button>
+</div>
+<br>
+<h1>Display All Products</h1>
+<br>
+
+<table id="displayProduct" class="list">
+
+</table>
+
+<script>
+let products = ["Iphone5","Iphone6","Iphone7","Iphone8","Iphone10"]
+let data = ""
+        displayProduct()
+        function displayProduct(){
+            data = "<tr>" +
+                "<td colspan='2'><b>Product Name</b></td>"+
+                "<td style='text-align: right;color: red'>"+products.length+ " Products</td>"+
+                "</tr>"
+
+            for (let i =0;i<products.length;i++){
+                data += "<tr>" +
+                    "<td>" + products[i]+ "</td> " +
+                    "<td><button onclick='edit("+ i +")' class='edit'>Edit</button> </td> " +
+                    "<td><button onclick='del("+ i +")' class='del'>Delete</button> </td> " +
+                    "</tr>"
+            }
+            document.getElementById('displayProduct'). innerHTML = data
+        }
+        function add(){
+          let productAdd =  document.getElementById('newproduct').value;
+          products.push(productAdd)
+            data = ""
+            displayProduct()
+            document.getElementById('newproduct').value = ""
+
+        }
+
+        function del(i){
+            products.splice(i,1)
+            data = ""
+            displayProduct()
+        }
+        function edit(i){
+            let str = prompt(" Nhập nội dung thay đổi : ")
+            products[i] =str
+
+            displayProduct()
+        }
+
+
+</script>
+</body>
+</html>
