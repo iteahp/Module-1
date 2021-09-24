@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô tả lớp Temperatute</title>
+</head>
+<body>
+<script>
+   class Temperatute {
+       c;
+       constructor(c) {
+
+        this.c = c
+       }
+        getF (){
+            return this.c *9/5 +32
+        }
+        getK (){
+           return this.c + 273.15
+        }
+    }
+    let C = new Temperatute(25)
+    let F = C.getF()
+    let K = C.getK()
+    alert("Nhiệt độ F tương ứng = "+F+" và nhiệt độ Kenvin tương ứng = " +K)
+</script>
+</body>
+</html>

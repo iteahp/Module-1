@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Mn mô tả chương trình có lớp Mèo và Chuột,
+ lớp Mèo có 2 đố tượng tom và oggy,
+  lớp chuột có 1 đối tượng Jerrry,
+  mỗi khi bị mèo cào, chuột trừ 1 máu,
+  mỗi khi bị chuột lừa, mèo bị trừ 2 máu
+-->
+<body>
+<script>
+    class Cat{
+        name;
+        health;
+        constructor(name,health) {
+            this.name = name ;
+            this.health = health;
+        }
+        scratch(someMouse){
+            if(someMouse.name === "Jerry"){
+                someMouse.health -= 1;
+            }
+        }
+    }
+    class Mouse{
+        name;
+        health;
+        constructor(name,health) {
+            this.name = name ;
+            this.health = health;
+        }
+        trick(someCat){
+            if(someCat.name === "Tom"|| someCat.name === "Oggy"){
+                someCat.health -= 2;
+            }
+        }
+    }
+    let cat1= new Cat("Tom",10);
+    let cat2= new Cat("Oggy",10);
+    let mouse1 = new Mouse("Jerry",10);
+    cat1.scratch(mouse1);
+    mouse1.trick(cat2);
+    cat2.scratch(mouse1);
+    console.log(mouse1.health);
+    console.log(cat2.health);
+    console.log(cat1.health);
+
+</script>
+</body>
+</html>
