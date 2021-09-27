@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        battery
+        status
+        mess
+        constructor(battery,) {
+            this.battery = battery
+            this.status = true
+
+        }
+        isOn(){
+            if (this.status ===true){
+                console.log(" This phone is on")
+            }
+            else this.checkBattery()
+        }
+        checkBattery(){
+            if (this.battery===0){
+                this.status = false
+                console.log("Out of battery ")
+            }
+        }
+        turnOnOff(){
+            return this.status != this.status
+        }
+        typeMess(mess){
+            this.mess = mess
+        }
+        messIn(phone){
+            if (this.status ===true){
+            this.mess = phone.mess
+            console.log("Đã nhận được 1 tin nhắn : " + this.mess)
+            this.battery++
+            }
+        }
+        messOut(phone){
+            phone.mess = this.mess
+            console.log("Đã gửi tin nhắn : " +this.mess)
+            this.battery--
+        }
+
+
+
+
+
+    }
+</script>
+
+</body>
+</html>

@@ -27,8 +27,8 @@
      } triangle1()
      function triangle2(){
           let triangle = ""
-        for (let i=1;i<=5;i++){
-            for (j=6;j>i;j--){
+        for (let i=0;i<=5;i++){
+            for (let j=5;j>i;j--){
                 triangle = triangle +"*"
             }
             triangle = triangle +"<br>"
@@ -42,7 +42,7 @@
               for (let k=1;k<=(5-i);k++){
                   triangle = triangle +"&nbsp&nbsp;"
               }
-              for (j=0;j<i;j++){
+              for (let j=0;j<i;j++){
               triangle = triangle +"*"
 
               }
@@ -55,7 +55,7 @@
       function triangle4(){
           let triangle = ""
           for (let i=0;i<=5;i++){
-              for (j=1;j<=i;j++){
+              for (let j=1;j<=i;j++){
                   triangle+="&nbsp&nbsp"
               }
               for (let j=5;j>i;j--)

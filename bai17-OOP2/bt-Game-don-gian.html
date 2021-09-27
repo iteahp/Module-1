@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="game"></div>
+
+<script>
+    class Hero {
+
+        constructor(image, top, left, size,speed){
+
+
+        this.image = image;
+        this.top = top;
+        this.left = left;
+        this.size = size;
+        this.speed = speed
+     }
+
+        getHeroElement ()
+        {
+            return '<img width="'+ this.size + '"' +
+                ' height="'+ this.size + '"' +
+                ' src="' + this.image +'"' +
+                ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+        }
+
+        moveRight (){
+            this.left += this.speed;
+            console.log('ok: ' + this.left);
+        }
+        moveLeft(){
+            this.left-= this.speed
+            console.log('ok: ' + this.left);
+        }
+        moveDown(){
+            this.top += this.speed
+            console.log('ok: ' + this.left);
+        }
+        moveUp(){
+            this.top -= this.speed
+            console.log('ok: ' + this.left);
+        }
+
+    }
+
+    var hero = new Hero('image/Luffy.jpg', 20, 30, 200,50);
+
+    function right() {
+        if (hero.left < window.innerWidth - hero.size) {
+            hero.moveRight();
+        }
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(right, 500)
+    }
+    function left() {
+        if (hero.left < window.innerWidth - hero.size) {
+            hero.moveLeft();
+        }
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+
+        setTimeout(left, 500)
+    }function down(){
+        if(hero.left < window.innerHeight - hero.size){
+            hero.moveDown();
+        }
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(down, 500)
+    }function up(){
+        if(hero.left < window.innerHeight - hero.size){
+            hero.moveUp();
+        }
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(up, 500)
+    }
+
+</script>
+</body>
+</html>
