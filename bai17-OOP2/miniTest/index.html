@@ -12,24 +12,16 @@
         height;
         x
         y
+        color
         ;
 
-        constructor(width, height) {
+        constructor(x,y,width, height,color) {
             this.width = width
             this.height = height
-            this.x = Math.floor(Math.random()*800)
-            this.y = Math.floor(Math.random()*800)
+            this.x = x
+            this.y = y
+            this.color = color
 
-        }
-        getRandomHex(){
-            return Math.floor(Math.random()*255);
-        }
-
-        getRandomColor(){
-            var red = this.getRandomHex();
-            var green = this.getRandomHex();
-            var blue = this.getRandomHex();
-            return "rgb(" + red + "," + blue + "," + green +")";
         }
 
         setWidth(width) {
@@ -48,19 +40,30 @@
             return this.width * 2 + this.height * 2
         }
 
-        drawCanvas() {
-            let ctx = document.getElementById('myCanvas').getContext("2d")
-            ctx.fillStyle = this.getRandomColor()
+        drawCanvas(ctx) {
+            ctx.fillStyle = this.color
             ctx.fillRect(this.x, this.y, this.width, this.height)
         }
     }
-    let canvas = new Rectangle(100,50)
-    function mutipRectangle() {
-        for (let i = 0; i < 10; i++) {
-            canvas.drawCanvas()
-        }
+    let ctx = document.getElementById('myCanvas').getContext('2d')
+
+    function getRandomHex(){
+        return Math.floor(Math.random()*255);
     }
-    mutipRectangle()
+
+    function getRandomColor(){
+        var red = getRandomHex();
+        var green = getRandomHex();
+        var blue = getRandomHex();
+        return "rgb(" + red + "," + blue + "," + green +")";
+    }
+    for (let i =0;i<10;i++){
+        let x = Math.random()*800
+        let y = Math.random()*800
+        let color = getRandomColor()
+        let sq = new Rectangle(x,y,100,50,color)
+        sq.drawCanvas(ctx)
+    }
 
 </script>
 
