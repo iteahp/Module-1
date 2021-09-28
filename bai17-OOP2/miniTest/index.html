@@ -5,7 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<canvas id="myCanvas" width="1000" height="1000"></canvas>
+<canvas id="myCanvas" width="500" height="500" style="border: 1px solid orangered"></canvas>
+<button >Ấn vào đây</button>
 <script>
     class Rectangle {
         width;
@@ -13,14 +14,18 @@
         x
         y
         color
+        speedX
+        speedY
         ;
 
-        constructor(x,y,width, height,color) {
+        constructor(x,y,width, height,color,speedX,speedY) {
             this.width = width
             this.height = height
             this.x = x
             this.y = y
             this.color = color
+            this.speedX = speedX
+            this.speedY = speedY
 
         }
 
@@ -39,31 +44,64 @@
         getPeri() {
             return this.width * 2 + this.height * 2
         }
+        moveLeft(){
+            this.x -=this.speedX
+        }
+        moveDown(){
+            this.y += this.speedY
+        }
+        check(){
+            if (this.y<0 || this.y>500 -this.height){
+                this.speedY = -this.speedY
+            }
+            if (this.x<0 || this.x>500 -this.width){
+                this.speedX = -this.speedX
+            }
+
+        }
 
         drawCanvas(ctx) {
+            ctx.beginPath()
             ctx.fillStyle = this.color
             ctx.fillRect(this.x, this.y, this.width, this.height)
+            ctx.closePath()
         }
     }
     let ctx = document.getElementById('myCanvas').getContext('2d')
 
-    function getRandomHex(){
-        return Math.floor(Math.random()*255);
+    let sq = new Rectangle(50,50,100,50,"blue",2,3)
+    sq.drawCanvas(ctx)
+    moveSquare2()
+
+    function moveSquare2(){
+        ctx.clearRect(sq.x-10,sq.y-10,sq.width+20,sq.height+20)
+        sq.moveLeft()
+        sq.moveDown()
+        sq.check()
+        sq.drawCanvas(ctx)
+        requestAnimationFrame(moveSquare2)
+
     }
 
-    function getRandomColor(){
-        var red = getRandomHex();
-        var green = getRandomHex();
-        var blue = getRandomHex();
-        return "rgb(" + red + "," + blue + "," + green +")";
-    }
-    for (let i =0;i<10;i++){
-        let x = Math.random()*800
-        let y = Math.random()*800
-        let color = getRandomColor()
-        let sq = new Rectangle(x,y,100,50,color)
-        sq.drawCanvas(ctx)
-    }
+
+    // function getRandomHex(){
+    //     return Math.floor(Math.random()*255);
+    // }
+    //
+    // function getRandomColor(){
+    //     var red = getRandomHex();
+    //     var green = getRandomHex();
+    //     var blue = getRandomHex();
+    //     return "rgb(" + red + "," + blue + "," + green +")";
+    // }
+    // for (let i =0;i<10;i++){
+    //     let x = Math.random()*800
+    //     let y = Math.random()*800
+    //     let color = getRandomColor()
+    //     let sq = new Rectangle(x,y,100,50,color)
+    //     sq.drawCanvas(ctx)
+    // }
+
 
 </script>
 

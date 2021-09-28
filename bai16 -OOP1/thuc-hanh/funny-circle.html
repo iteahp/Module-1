@@ -11,30 +11,73 @@
         x
         y
         radius
+        color
         constructor(x,y,radius) {
             this.x = x
             this.y = y
             this.radius = radius
         }
-        getRandomHex(){
-            return Math.floor(Math.random()*255);
-        }
-        getRandomColor(){
-            var red = this.getRandomHex();
-            var green = this.getRandomHex();
-            var blue = this.getRandomHex();
-            return "rgb(" + red + "," + blue + "," + green +")";
-        }
-        createCircle(){
-            var ctx = document.getElementById("myCanvas").getContext("2d");
+        createCircle(ctx){
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
-            ctx.fillStyle = this.getRandomColor();
+            ctx.fillStyle = this.color;
             ctx.fill();
+            ctx.closePath()
         }
     }
+
     let circle = new Circle(500,500,80)
-    circle.createCircle()
+    let ctx = document.getElementById("myCanvas").getContext("2d");
+    circle.createCircle(ctx)
+   function  getRandomHex(){
+        return Math.floor(Math.random()*255);
+    }
+    function  getRandomColor(){
+        let red = this.getRandomHex();
+        let green = this.getRandomHex();
+        let blue = this.getRandomHex();
+        return "rgb(" + red + "," + blue + "," + green +")";
+    }
+    function createCircle2(){
+        let radius = Math.floor(Math.random() * 80);
+        let circle= new Circle(200, 200, radius);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.fill();
+    }
+    createCircle2()
+    function createCircle3(){
+
+        let radius = Math.floor(Math.random() * 80);
+        let color = getRandomColor();
+        let circle= new Circle(300, 300, radius);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = color;
+        ctx.fill();
+    }
+    createCircle3()
+    function createCircle4(){
+        let radius = Math.floor(Math.random() * 80);
+        let color = getRandomColor();
+        let x = Math.random() * window.innerWidth;
+        let y = Math.random() * window.innerHeight;
+        let circle= new Circle(x, y, radius);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = color;
+        ctx.fill();
+    }
+
+    function createMultipleCircle(){
+        for(var i = 0; i < 10; i++){
+            createCircle4();
+        }
+    }
+    createMultipleCircle()
+
+
+
 
 
 </script>

@@ -15,7 +15,7 @@
         return  this.weight;
       }
       decreaseApple(){
-         return  this.weight-=1
+          this.weight-=1
       }
       isEmpty(){
           if (this.weight ===0){
@@ -35,25 +35,62 @@
           this.weight = weight
           this.gender = gender
       }
-      eatApple(apple){
+      getName(){
+          return this.name
+      }
+      setName(name){
+          this.name = name
+      }
+      getWeight(){
+          return this.weight
+      }
+      setWeight(weight){
+          this.weight = weight
+      }
+      isMale(){
+          if(this.gender ==="Male"){
+              return true
+          }else{
+              return false
+          }
+      }
+      setGender(gender){
+          this.gender = gender
+      }
+      say(string){
+          console.log(string)
+      }
+      check(){
+
+      }
+      getGender(){
+          return this.gender
+      }
+      eat(apple){
           if (apple.isEmpty()){
               this.weight +=1
               apple.decreaseApple()
               console.log(this.name + " eat apple")
+          }else {
+              console.log('Apple are already eaten');
           }
+
       }
+
 
   }
   function theStory() {
-      var adam = new Human('adam',"male", 60);
-      var eva = new Human('eva',"female", 45);
-      var apple = new Apple(10)
+      let adam = new Human('Adam',"Male", 60);
+      let eva = new Human('Eva',"Female", 45);
+      let apple = new Apple(10)
       while (apple.weight > 0) {
-          adam.eatApple(apple);
-          eva.eatApple(apple);
-          console.log(apple.weight)
+          adam.eat(apple);
+          eva.eat(apple);
+          console.log(apple.getWeight())
+          console.log(adam.getWeight())
+          console.log(eva.getWeight())
+
       }
-      console.log('Apple are already eaten');
   }
 
   theStory();

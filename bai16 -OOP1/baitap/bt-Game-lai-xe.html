@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onkeydown="moveCar()">
+<canvas id="myCanvas" width="1500" height=" 700" style="border: 1px solid orange"></canvas>
+<script>
+    class Car {
+        x
+        y
+        size
+        speed
+        color
+
+        constructor(x, y, size, color) {
+            this.x = x
+            this.y = y
+            this.size = size
+            this.color = color
+        }
+
+        drawCar(ctx) {
+            ctx.beginPath()
+            ctx.fillStyle = this.color
+            ctx.fillRect(this.x, this.y, this.size, this.size)
+
+            ctx.closePath()
+        }
+
+        moveLeft() {
+            this.x -= 20
+        }
+
+        moveRight() {
+            this.x += 20
+        }
+
+        moveUp() {
+            this.y -= 20
+        }
+
+        moveDown() {
+            this.y += 20
+        }
+
+    }
+
+    class Obstacle {
+        x;
+        y;
+        radius;
+        speedX
+        speedY
+        color
+
+        constructor(x, y, radius, speedX, speedY, color) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.speedX = speedX
+            this.speedY = speedY
+            this.color = color
+        }
+
+        drawObstacle(ctx) {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+        }
+
+        check() {
+            if (this.x < 0 || this.x > 1500 - this.radius) {
+                this.speedX = -this.speedX
+            }
+            if (this.y < 0 || this.y > 700 - this.radius) {
+                this.speedY = -this.speedY
+            }
+        }
+
+        moveLeft() {
+            this.x += this.speedX
+        }
+
+        moveDown() {
+            this.y += this.speedY;
+        }
+    }
+
+    let ctx = document.getElementById('myCanvas').getContext('2d')
+    let car = new Car(750, 650, 50, "yellow")
+    let x1 = Math.random() * 1000
+    let x2 = Math.random() * 1000
+
+    let obstacle = new Obstacle(x1, 0, 50, 2, 3, "red")
+    let obstacle2 = new Obstacle(x2, 0, 25, 4, 5, "blue")
+
+    function display() {
+        car.drawCar(ctx)
+        obstacle.drawObstacle(ctx)
+        obstacle2.drawObstacle(ctx)
+    }
+
+    display()
+
+    function run() {
+        ctx.clearRect(0, 0, 1500, 700)
+        obstacle.moveDown()
+        obstacle.moveLeft()
+        obstacle2.moveLeft()
+        obstacle2.moveDown()
+        obstacle.check()
+        obstacle2.check()
+        display()
+        requestAnimationFrame(run)
+    }
+
+    run()
+
+    function moveCar() {
+        switch (event.keyCode) {
+            case 37: {
+                car.moveLeft();
+                break;
+            }
+            case 38: {
+                car.moveUp();
+                break;
+            }
+            case 39: {
+                car.moveRight();
+                break;
+            }
+            case 40: {
+                car.moveDown();
+                break;
+            }
+        }
+        ctx.clearRect(0, 0, 1500, 700)
+        car.drawCar(ctx)
+
+    }
+
+    function checkCol() {
+        if ((car.x + car.size > obstacle.x && car.y <= obstacle.y + obstacle.radius) &&
+            (car.x < obstacle.x + obstacle.radius && car.y <= obstacle.y + obstacle.radius)) {
+            return true
+        }
+
+        if ((car.x + car.size > obstacle2.x && car.y <= obstacle2.y + obstacle2.radius) &&
+            (car.x < obstacle2.x + obstacle2.radius && car.y <= obstacle2.y + obstacle2.radius)) {
+            return true
+        }
+        return false
+
+    }
+
+    let intervalId = setInterval(moveObstacle, 100)
+
+    function moveObstacle() {
+        if (checkCol() === true) {
+            location.reload();
+            clearInterval(intervalId)
+            alert("Game Over");
+        }
+    }
+
+    moveObstacle()
+    run()
+
+
+</script>
+</body>
+</html>
