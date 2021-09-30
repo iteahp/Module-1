@@ -39,17 +39,12 @@
             console.log('ok: ' + this.left);
         }
 
-        check(){
-            if(this.left ==1000 || this.left == 0){
-                this.speed = -this.speed
-            }
-        }
 
     }
 
     var hero = new Hero('image/Luffy.jpg', 20, 30, 200,5);
-    right()
-    function right() {
+    start()
+    function start() {
             hero.moveRight();
         document.getElementById('game').innerHTML = hero.getHeroElement();
         requestAnimationFrame(right)

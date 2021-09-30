@@ -79,13 +79,25 @@
                 this.speedY = -this.speedY
             }
         }
+        back(){
+            if (this.y ===700 -this.radius){
+                this.y =0
+                this.x =Math.random()*1500
+            }
+        }
 
         moveLeft() {
-            this.x += this.speedX
+            this.x -= this.speedX
         }
 
         moveDown() {
             this.y += this.speedY;
+        }
+        moveRight() {
+            this.x += this.speedX
+        }
+        moveUp(){
+            this.y -= this.speedY;
         }
     }
 
@@ -109,10 +121,12 @@
         ctx.clearRect(0, 0, 1500, 700)
         obstacle.moveDown()
         obstacle.moveLeft()
-        obstacle2.moveLeft()
         obstacle2.moveDown()
+        obstacle2.moveRight()
         obstacle.check()
         obstacle2.check()
+        // obstacle.back()
+        // obstacle2.back()
         display()
         requestAnimationFrame(run)
     }

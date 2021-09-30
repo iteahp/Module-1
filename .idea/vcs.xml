@@ -2,12 +2,19 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CaseStudy/Flappy-Bird" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/bai10" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bai10- Lặp1" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/bai5" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bai5-" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/bai5baitap" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bai6-Tổng quan Js" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/bai7" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bai7_Biến_kiểu dữ liệu" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/bai8" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bai8-Đk1" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/bai9" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bai9-Đk2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/bài 4" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/bài 6" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/minitest" vcs="Git" />

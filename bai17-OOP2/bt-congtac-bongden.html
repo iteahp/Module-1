@@ -8,14 +8,23 @@
 <script>
     class ElectricLamp {
         status
-        constructor() {
-            this.status = false;
+        constructor(status) {
+            this.status = status;
         }
         turnOff() {
             this.status = false;
+            this.getStatus()
         }
         turnOn() {
             this.status = true;
+            this.getStatus()
+        }
+        getStatus(){
+            if (this.status){
+                console.log("Lamp is on")
+            }else {
+                console.log("Lamp is off")
+            }
         }
     }
     class SwitchButton {
@@ -35,7 +44,7 @@
             this.lamp.turnOn();
         }
     }
-    let lamp = new ElectricLamp();
+    let lamp = new ElectricLamp(false);
     let lampSwitch = new SwitchButton();
     lampSwitch.connectToLamp(lamp);
     let count = 0;

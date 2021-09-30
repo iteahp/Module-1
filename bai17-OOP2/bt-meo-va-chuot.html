@@ -43,7 +43,7 @@
           }
       }
       eatMouse(mouse){
-          if (this.canCatchMouse(mouse) && mouse.isLive === true ){
+          if (this.canCatchMouse(mouse) ===true && mouse.isLive === true ){
               this.weight += mouse.weight
               mouse.isLive = false
               mouse.weight = 0
