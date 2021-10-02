@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        canvas {
+            border: 5px solid orange;
+        }
+        body{
+            background-image: url("images/background1.jpg");
+        }
+        .start {
+            background-color: chartreuse;
+            text-shadow:2px 2px aqua;
+            border-radius: 5px
+        }
+        .reset{
+            background-color: aqua ;
+            text-shadow: 2px 2px orange;
+            border-radius: 5px;
+        }
+        h1 {
+            width: 100px;
+        }
+        .rule {
+            color: blueviolet;
+            background-color: azure;
+            width: 700px;
+        }
+
+    </style>
+
+</head>
+<body>
+<center>
+
+        <button onclick="run()" id="start" class="start"><h1>Start</h1></button>
+        <button onclick="run()" id='reset' class="reset"><h1>Reset</h1></button>
+    <br>
+     <h2 class="rule">Nhấn 1 nút bất kỳ để cho chim bay lên chui qua giữa 2 đường ống</h2>
+    <br>
+    <canvas id="game" width="900" height="500"></canvas>
+</center>
+<script src="Main.js"> </script>
+</body>
+</html>
