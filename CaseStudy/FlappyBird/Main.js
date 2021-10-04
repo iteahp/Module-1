@@ -19,7 +19,7 @@ let hitAudio = new Audio("audio/hit.wav")
 let bgAudio = new Audio('audio/bgMusic.mp3')
 let score = 0;
 let bestScore = 0
-let distance2Tube = 140;
+let distance2Tube = 200;
 let distanceToTubeDown;
 
 let bird = {
@@ -47,7 +47,7 @@ function run() {
 
         context.drawImage(tubeDown, tube[i].x, tube[i].y + distanceToTubeDown);
         tube[i].x -= 5
-        if (tube[i].x === 450) {
+        if (tube[i].x === 600) {
             tube.push({
                 x: canvas.width,
                 y: Math.floor(Math.random() * tubeUp.height) - tubeUp.height
