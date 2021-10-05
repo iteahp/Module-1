@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function countCharacters(strArr) {
+        let count = 0
+        let vowelCharacter = ["a", "o", "e", "u", "i"]
+        for (let j = 0; j < strArr.length; j++) {
+            if (vowelCharacter.indexOf(strArr[i]) !== -1) {
+                count++
+            }
+        }
+        if (count !== 0) {
+            alert("the input string has " + count + " vowel characters")
+        } else return false
+
+    }
+    let str = prompt("Enter the string to check ")
+    let strArr = str.split("")
+    countCharacters(strArr)
+</script>
+</body>
+</html>
